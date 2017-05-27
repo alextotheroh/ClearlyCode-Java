@@ -1,2 +1,2 @@
-# HackerRank-Java
-HackerRank solutions written in Java
+# ClearlyCode-Java
+ClearlyCode solutions written in Java
