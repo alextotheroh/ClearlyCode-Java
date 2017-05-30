@@ -3,7 +3,7 @@
 
 # IntelliJ config files
 **/.idea
-**/.iml
+*.iml
 
 # Log file
 *.log
