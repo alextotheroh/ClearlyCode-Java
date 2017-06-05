@@ -21,7 +21,10 @@ public class CommentedSolution {
         for (int i=0; i < (coins.length); i++) { // for each coin
             for (int j = (int)coins[i]; j <= goal; j++) { // for each sum greater than the current coin value and less than the goal value
                 solutionsTable[j] += solutionsTable[j - (int)coins[i]]; // the number of ways to make this sum is equal to the ways we currently know of plus the number of ways to make this sum minus this coin
-                // In other words, we use what we already know! (the number of ways to make a lesser value, more precisely the value that is exactly the current value minus the current coin)
+                // In other words, if we assume that we got to this value by choosing this coin, then we should increment the number of ways to make this value, j, by the
+                // number of ways to create the value BEFORE we chose this coin.
+
+                // Notice we use what we already know! (the number of ways to make a lesser value, more precisely the value that is exactly the current value minus the current coin)
                 // So we're building our solutions from the ground up without duplicating work: dynamic programming.
             }
         }
