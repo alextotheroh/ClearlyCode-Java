@@ -12,9 +12,21 @@ public class Solution {
 
         solutionsTable[0] = (long)1;
 
+        int step = 0;
+
         for (int i = 0; i < coins.length; i++) {
             for (int j = (int)coins[i]; j <= goal; j++) {
                 solutionsTable[j] += solutionsTable[j - (int)coins[i]];
+
+                System.out.println("---------------" + " step " + step + " ----------------");
+                System.out.println("ultimate goal: " + goal);
+                System.out.println("coins available: " + Arrays.toString(coins));
+                System.out.println("current coin: " + coins[i]);
+                System.out.println("current goal: " + j + "\n");
+
+                System.out.println(Arrays.toString(solutionsTable) + "\n");
+
+                step++;
             }
         }
 
